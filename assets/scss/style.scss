@@ -1,0 +1,17 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  color: #fff;
+  background-color: #251f1b;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.block {
+  &__text {
+    background-color: #f00;
+  }
+}
