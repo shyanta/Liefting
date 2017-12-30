@@ -1,0 +1,160 @@
+// All mixins
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+}
+
+// All mixins needed for Flexbox
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction($value) {
+  -webkit-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+     -moz-flex-wrap: $wrap;
+      -ms-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+
+@mixin flex-order($value) {
+  -webkit-order: $value;
+  -ms-flex-order: $value;
+  order: $value;
+}
+
+@mixin flex($value) {
+  -webkit-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+     -moz-flex-basis: $width;
+      -ms-flex-basis: $width;
+          flex-basis: $width;
+}
+
+@mixin align-self($value) {
+  -webkit-align-self: $value;
+  -ms-flex-item-align: $value;
+  align-self: $value;
+}
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  -ms-align-items: $value;
+  align-items: $value;
+}
+
+@mixin flex-flow($value: (wrap)) {
+  -webkit-flex-flow: $value;
+  -moz-flex-flow: $value;
+  -ms-flex-flow: $value;
+  flex-flow: $value;
+}
+
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    } @else if $value == flex-end {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      } @else if $value == space-between {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        } @else if $value == space-around {
+          -ms-flex-pack: distribute;
+          } @else {
+            -webkit-box-pack: $value;
+            -ms-flex-pack: $value;
+          }
+          -webkit-justify-content: $value;
+          -moz-justify-content: $value;
+          justify-content: $value;
+        }
+
+
+@mixin user-select-none() {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version */
+}
+
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+      );
+
+    @media #{$query} {
+      @content;
+    }
+  }
+  @else {
+    @error 'No value found for `#{$breakpoint}`. '
+    + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin gradient($direction, $from, $to) {
+  background-color: $to;
+
+  // safari fixes
+  @if $direction == 'top' {
+    background-image: -webkit-linear-gradient(bottom, $from, $to);
+  }
+  @else {
+    background-image: -webkit-linear-gradient($direction, $from, $to);
+  }
+  @if $direction == 'right' {
+    background-image: -webkit-linear-gradient(left, $from, $to);
+  }
+  @else {
+    background-image: -webkit-linear-gradient($direction, $from, $to);
+  }
+  @if $direction == 'bottom' {
+    background-image: -webkit-linear-gradient(top, $from, $to);
+  }
+  @else {
+    background-image: -webkit-linear-gradient($direction, $from, $to);
+  }
+  @if $direction == 'left' {
+    background-image: -webkit-linear-gradient(right, $from, $to);
+  }
+  @else {
+    background-image: -webkit-linear-gradient($direction, $from, $to);
+  }
+  background-image: -moz-linear-gradient($direction, $from, $to);
+  background-image: -o-linear-gradient($direction, $from, $to);
+  background-image: -ms-linear-gradient($direction, $from, $to);
+  background-image: linear-gradient($direction, $from, $to);
+}
