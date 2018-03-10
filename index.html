@@ -5,74 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liefting Tuinen</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header__nav">
-        <div class="container">
-          <img class="header__nav--logo" src="assets/images/logo.png" alt="Liefting Tuinen Logo">
-          <nav class="header__nav--list">
-            <ul>
-              <li class="header__nav--listitem"><a href="#">Home</a></li>
-              <li class="header__nav--listitem"><a href="#">Over Mij</a></li>
-              <li class="header__nav--listitem"><a href="#">Inspiratie</a></li>
-              <li class="header__nav--listitem"><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__nav">
+          <div class="container">
+            <img class="header__nav--logo" src="assets/images/logo.png" alt="Liefting Tuinen Logo">
+            <input class="header__nav--menu-toggle" type="checkbox" name="toggle-menu" id="toggle-menu">
+            <label class="header__nav--menu-icon" for="toggle-menu"></label>
+            <nav class="header__nav--list">
+              <ul>
+                <li class="header__nav--listitem active"><a href="#">Home</a></li>
+                <li class="header__nav--listitem"><a href="#">Over Mij</a></li>
+                <li class="header__nav--listitem"><a href="#">Inspiratie</a></li>
+                <li class="header__nav--listitem"><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="clear"></div>
+          </div>
         </div>
-      </div>
-      <div class="header__nav--filler"></div>
-      <div class="header__hero">
-        <img  src="assets/images/slide1.jpg" alt="">
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <section class="block block__text block--left col-2 row-2">
-          <h1>Liefting Tuinen</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
-        <section class="block block__img block--right col-1 row-3"
-        style="background-image: url('assets/images/garden-1.jpg');">
-          <img src="assets/images/garden-1.jpg" alt="">
-        </section>
-        <section class="block block__img block--left col-1 row-2"
-        style="background-image: url('assets/images/garden-2.jpg');">
-          <img src="assets/images/garden-2.jpg" alt="">
-        </section>
-        <section class="block block__button block--left col-1 row-1"
-        style="background-image: url('assets/images/garden-3.jpg');">
-          <img src="assets/images/garden-3.jpg" alt="">
-          <button type="button" name="button">Over mij</button>
-        </section>
-        <section class="block block__slider block--right col-2 row-2">
-          <ul>
-            <li style="background-image: url('assets/images/garden-4.jpg');">
-              <img src="assets/images/garden-4.jpg" alt="">
-            </li>
-            <li style="background-image: url('assets/images/garden-4.jpg');">
-              <img src="assets/images/garden-4.jpg" alt="">
-            </li>
-            <li style="background-image: url('assets/images/garden-4.jpg');">
-              <img src="assets/images/garden-4.jpg" alt="">
-            </li>
-            <li style="background-image: url('assets/images/garden-4.jpg');">
-              <img src="assets/images/garden-4.jpg" alt="">
-            </li>
-          </ul>
-        </section>
-        <section class="block block__button block--left col-1 row-1"
-        style="background-image: url('assets/images/garden-3.jpg');">
-          <img src="assets/images/garden-3.jpg" alt="">
-          <button type="button" name="button">Over mij</button>
-        </section>
-        <div class="clear"></div>
-      </div>
-    </main>
-    <footer>
-
-    </footer>
+        <div class="header__nav--filler"></div>
+        <div class="header__hero">
+          <img class="header__hero--image" src="assets/images/slide1.jpg" alt="">
+          <div class="container">
+            <h1 class="header__hero--title">Liefting Tuinen</h1>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <section class="block block__text block--left col-2 row-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </section>
+          <section class="block block__img block--right col-1 row-3"
+          style="background-image: url('assets/images/garden-1.jpg');">
+            <img src="assets/images/garden-1.jpg" alt="">
+          </section>
+          <section class="block block__img block--left col-1 row-2"
+          style="background-image: url('assets/images/garden-2.jpg');">
+            <img src="assets/images/garden-2.jpg" alt="">
+          </section>
+          <section class="block block__button block--left col-1 row-1"
+          style="background-image: url('assets/images/garden-3.jpg');">
+            <img src="assets/images/garden-3.jpg" alt="">
+            <button type="button" name="button">Over mij</button>
+          </section>
+          <section class="block block__slider block--right col-2 row-2">
+            <ul>
+              <li style="background-image: url('assets/images/garden-4.jpg');">
+                <img src="assets/images/garden-4.jpg" alt="">
+              </li>
+              <li style="background-image: url('assets/images/garden-4.jpg');">
+                <img src="assets/images/garden-4.jpg" alt="">
+              </li>
+              <li style="background-image: url('assets/images/garden-4.jpg');">
+                <img src="assets/images/garden-4.jpg" alt="">
+              </li>
+              <li style="background-image: url('assets/images/garden-4.jpg');">
+                <img src="assets/images/garden-4.jpg" alt="">
+              </li>
+            </ul>
+          </section>
+          <section class="block block__button block--left col-1 row-1"
+          style="background-image: url('assets/images/garden-3.jpg');">
+            <img src="assets/images/garden-3.jpg" alt="">
+            <button type="button" name="button">Inspiratie</button>
+          </section>
+          <div class="clear"></div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__left">
+            <h1 class="footer__title">Liefting Tuinen</h1>
+            <ul class="footer__list">
+              <li class="footer__list--item"><a href="index.html">Home</a></li>
+              <li class="footer__list--item"><a href="index.html">Over mij</a></li>
+              <li class="footer__list--item"><a href="index.html">Inspiratie</a></li>
+              <li class="footer__list--item"><a href="index.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__right">
+            <h1 class="footer__title">Contactgegevens</h1>
+            <ul class="footer__list footer__list--icons">
+              <li class="footer__list--item footer__list--phone"><a href="tel:0651234651">06 - 51234651</a></li>
+              <li class="footer__list--item footer__list--mail"><a href="mailto:info@lieftingtuinen.nl">info@lieftingtuinen.nl</a></li>
+              <li class="footer__list--item footer__list--location">
+                <span>Nachtorchis 6</span>
+                <span>1906 HK Limmen</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyrights">
+          <p>Copyrights &#9400; 2018, Lieftingtuinen. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

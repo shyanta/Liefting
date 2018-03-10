@@ -1,3 +1,12 @@
+// Responsive breakpoint manager
+$breakpoints: (
+  'x-small': (min-width: 20em), // 320px small devices
+  'small':   (min-width: 40em), // 480px main phone devices
+  'medium':  (min-width: 48em), // 768px main tablet portrait
+  'large':   (min-width: 64em), // 1024px main tablet landscape
+  'x-large': (min-width: 80em), // 1280px main laptop screen
+);
+
 // All mixins
 @mixin border-radius($radius) {
   border-radius: $radius;
